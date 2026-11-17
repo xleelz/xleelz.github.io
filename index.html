@@ -2,17 +2,25 @@
 layout: default
 ---
 
-<div class="posts">
+<section class="intro">
+  <h1 class="intro-title">Hi, I'm {{ site.author }}.</h1>
+  <p class="intro-lede">
+    Software engineer at OpenRelay and former AWS SDE. I write about system design,
+    distributed systems, and the practical side of building software that keeps running.
+  </p>
+</section>
+
+<section class="post-list" aria-labelledby="latest-posts">
+  <h2 id="latest-posts" class="section-label">Latest posts</h2>
+
   {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    <article class="post-card">
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      </p>
+      <h3 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-card-summary">{{ post.description | default: post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a class="read-more" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">Read more &rarr;</a>
     </article>
   {% endfor %}
-</div>
+</section>

@@ -1,23 +1,30 @@
-
 //
 // VARIABLES
 //
 
-// Colors
-$blue: #4183C4;
+// Surfaces
+$bg: #0e1116;
+$surface: #151a21;
+$surface-raised: #1b212a;
+$border: #262d38;
 
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+// Text
+$text: #c5ccd6;
+$text-strong: #eef1f5;
+$text-muted: #8a94a3;
+
+// Accent (warm amber, like a backlit keycap)
+$accent: #f2a65a;
+$accent-hover: #ffc488;
+$accent-soft: rgba(242, 166, 90, 0.12);
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+// Layout
+$content-width: 720px;
+$radius: 8px;
 
 // Mobile breakpoints
 @mixin mobile {

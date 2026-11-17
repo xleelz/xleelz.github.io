@@ -1,0 +1,10 @@
+{% assign links = site.footer-links %}
+<ul class="social-links">
+  {% if links.github %}<li><a href="https://github.com/{{ links.github }}">GitHub</a></li>{% endif %}
+  {% if links.linkedin %}<li><a href="https://www.linkedin.com/in/{{ links.linkedin }}">LinkedIn</a></li>{% endif %}
+  {% if links.twitter %}<li><a href="https://x.com/{{ links.twitter }}">X</a></li>{% endif %}
+  {% if links.stackoverflow %}<li><a href="https://stackoverflow.com/{{ links.stackoverflow }}">Stack Overflow</a></li>{% endif %}
+  {% if links.youtube %}<li><a href="https://youtube.com/{{ links.youtube }}">YouTube</a></li>{% endif %}
+  {% if links.email %}<li><a href="mailto:{{ links.email }}">Email</a></li>{% endif %}
+  {% if links.rss %}<li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>{% endif %}
+</ul>
